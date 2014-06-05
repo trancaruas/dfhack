@@ -13,3 +13,6 @@
 [submodule "depends/clsocket"]
 	path = depends/clsocket
 	url = git://github.com/DFHack/clsocket.git
+[submodule "dfterm3-plugin"]
+  path = plugins/dfterm3-plugin
+  url = git://github.com/Noeda/dfterm3-plugin.git

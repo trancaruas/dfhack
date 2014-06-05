@@ -41,6 +41,11 @@ if (BUILD_MAPEXPORT)
     add_subdirectory (mapexport)
 endif()
 
+OPTION(BUILD_DFTERM3 "Build dfterm3 plugin." ON)
+if (BUILD_DFTERM3)
+    add_subdirectory (dfterm3-plugin)
+endif()
+
 OPTION(BUILD_DWARFEXPORT "Build dwarf exporter." ON)
 if (BUILD_DWARFEXPORT)
     add_subdirectory (dwarfexport)
@@ -164,6 +169,7 @@ if (BUILD_SUPPORTED)
     DFHACK_PLUGIN(3dveins 3dveins.cpp)
     DFHACK_PLUGIN(strangemood strangemood.cpp)
     DFHACK_PLUGIN(command-prompt command-prompt.cpp)
+    DFHACK_PLUGIN(serv serv.cpp PROTOBUFS screen)
 endif()
 
 # this is the skeleton plugin. If you want to make your own, make a copy and then change it
