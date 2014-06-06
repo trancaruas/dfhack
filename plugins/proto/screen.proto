@@ -1,0 +1,33 @@
+package Serv;
+
+option optimize_for = LITE_RUNTIME;
+
+message Pen {
+  enum TileMode {
+    ASIS = 0;
+    CHARCOLOR = 1;
+    TILECOLOR = 2;
+  }
+
+  required TileMode tilemode = 1;
+  
+  required uint32 ch = 2;
+  required uint32 fg = 3;
+  required uint32 bg = 4;
+  required bool bold = 5;
+  
+  required uint32 tile = 6;
+  
+  required uint32 tile_fg = 7;
+  required uint32 tile_bg = 8;
+}
+
+
+message Screen {
+	required uint32 version = 1;
+
+  required uint32 dimx = 2;
+  required uint32 dimy = 3;
+
+  repeated Pen pen = 4;
+}
