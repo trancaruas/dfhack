@@ -98,7 +98,7 @@ void fillScreenProtobuf(color_ostream &out, std::vector <std::string> & paramete
   scr->set_dimx(dimx);
   scr->set_dimy(dimy);
 
-  out.print("Dumping screen with dimensions %dx%d again\n", dimx, dimy);
+  out.print("Dumping screen with dimensions %dx%d v2\n", dimx, dimy);
   Serv::Pen* pen;
   for(int i = 0; i < dimx; i++) {
     for(int j = 0; j < dimy; j++) {
